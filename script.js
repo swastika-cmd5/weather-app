@@ -1,10 +1,10 @@
-//const apiKey = "50d2a333d9636b77ad1b15ba606e08ff";
+const apiKey = "50d2a333d9636b77ad1b15ba606e08ff";
 
 function getWeather() {
   const city = document.getElementById("cityInput").value;
-  //const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  fetch('/api/weather?city=${city}')
+  fetch(apiUrl)
     .then(response => {
       if (!response.ok) {
         throw new Error("City not found");
